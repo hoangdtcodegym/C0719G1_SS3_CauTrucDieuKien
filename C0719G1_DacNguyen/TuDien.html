@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu dien</title>
+</head>
+<body>
+
+Nhap vao tu khoa: <br/><br/>
+<input type="text" id="keyWords">
+<br/><br/>
+<button type="button" onclick="searching()">Tra cuu</button>
+<p id="show"></p>
+
+<script>
+    function searching() {
+        let keyWords = document.getElementById("keyWords").value;
+        switch (keyWords) {
+            case 'Hoang':
+                document.getElementById("show").innerHTML = "Tutor lop c0719G1"
+                break;
+            case 'Luan':
+                document.getElementById("show").innerHTML = "Coach lop c0719g1"
+                break;
+            case 'Trang':
+                document.getElementById("show").innerHTML = "Giao vu"
+                break;
+            case 'Hai':
+                document.getElementById("show").innerHTML = "Lop truong"
+                break;
+            default:
+                document.getElementById("show").innerHTML = "CodeGym khong co nguoi ban tim!"
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+
+<body>
+<fieldset>
+    <legend>Login:</legend>
+    <p class="log">Username: </p><input class="in" type="text" id="username"><br/>
+    <p class="log">Password: </p><input class="in" type="password" id="password"><br/>
+
+    <button type="button" onclick="login()">Login</button>
+    <br/>
+
+    <p id="show"></p>
+</fieldset>
+
+<script>
+    function login() {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+
+        if (username !== '') {
+            if (password !== '') {
+                if (username.length >= 6) {
+                    document.getElementById("show").innerHTML = "Login Success!"
+                } else {
+                    document.getElementById("show").innerHTML = "Username need more than 6 characters.";
+                }
+            } else {
+                document.getElementById("show").innerHTML = "Please input password.";
+            }
+        } else {
+            document.getElementById("show").innerHTML = "Please input username.";
+        }
+    }
+</script>
+
+</body>
+</html>
