@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đua Ô Tô</title>
+</head>
+<body onload="docReady()">
+
+<img id="car1" src="images/anh1.png"
+     style="position: absolute; left: 0px; top: 0px;" height="194.5px" width="275px"/>
+<script>
+    function autoRun() {
+        let img = document.getElementById("car1");
+        let maxLeft = window.innerWidth - img.width;
+        let maxTop = window.innerHeight - img.height;
+        setInterval(run, 10, img, maxLeft, maxTop);
+    }
+
+    function run(img, maxLeft, maxTop) {
+        let left = parseInt(img.style.left);
+        let top = parseInt(img.style.top);
+        let anh = document.getElementById("car1");
+        if (left < maxLeft && top <= 0) {
+            left += 5;
+            anh.src = "images/anh1.png";
+        } else if (left >= maxLeft && top < maxTop) {
+            top += 5;
+            anh.src = "images/anh2.png";
+        } else if (left > 0 && top >= maxTop) {
+            left -= 5;
+            anh.src = "images/anh3.png";
+        } else if (left <= 0 && top > 0) {
+            top -= 5;
+            anh.src = "images/anh4.png";
+        }
+        img.style.left = left + "px";
+        img.style.top = top + "px";
+    }
+
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 13:
+                autoRun();
+                break;
+        }
+    }
+
+    function docReady() {
+        window.addEventListener('keyup', moveSelection);
+    }
+</script>
+</body>
+</html>
