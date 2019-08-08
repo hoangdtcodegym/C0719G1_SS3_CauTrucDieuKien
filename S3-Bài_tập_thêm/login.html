@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+<div>
+    <div class="container">
+        <label for="name">Username</label>
+        <input type="text" id="name">
+
+        <label for="psw">Password</label>
+        <input type="password" id="psw">
+
+        <button onclick="login()" type="button">Login</button>
+    </div>
+
+    <script>
+        let name = document.getElementById('name');
+        let pass = document.getElementById('psw');
+
+        function login() {
+            if (name.value === '') {
+                alert('Please enter username !!!!');
+            } else {
+                if (name.value.length < 6) {
+                    alert('Username must be more than 6 characters')
+                } else {
+                    if (pass.value === '') {
+                        alert('Please enter password you damn ass (==#)!!!')
+                    } else {
+                        if (pass.value.length < 6) {
+                            alert('Password must be more than 6 characters')
+                        } else {
+                            let lowerCaseLetters = /[a-z]/g;
+                            if (!pass.value.match(lowerCaseLetters)) {
+                                alert('Password must have lowercase letters');
+                            } else {
+                                let upperCaseLetters = /[A-Z]/g;
+                                if (!pass.value.match(upperCaseLetters)) {
+                                    alert('Password must have uppercase letters');
+                                } else {
+                                    let numbers = /[0-9]/g;
+                                    if (!pass.value.match(numbers)) {
+                                        alert('Password must have numbers');
+                                    } else{
+                                        document.write('Login successfully !!!!!!!!!!!!!!!');
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

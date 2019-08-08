@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 4</title>
+</head>
+<body>
+<input id="a" placeholder="Enter a ">
+<input id="b" placeholder="Enter b ">
+<input id="c" placeholder="Enter c ">
+<button type="button" onclick="checkmax()">Check</button>
+<p>The biggest number is</p>
+<p id="result"></p>
+<script>
+    function checkmax() {
+        let a = parseInt(document.getElementById('a').value);
+        let b = parseInt(document.getElementById('b').value);
+        let c = parseInt(document.getElementById('c').value);
+
+        let max ;
+        if (b > a) {
+            if (c > b) {
+                max = c;
+            } else {
+                max = b;
+            }
+        } else {
+            if (c > a) {
+                max = c;
+            } else {
+                max = a;
+            }
+        }
+        document.getElementById('result').innerHTML = max;
+    }
+</script>
+</body>
+</html>

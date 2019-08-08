@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh % hoa hong</title>
+</head>
+<body>
+<input id="doanhso" placeholder="Doanh số">
+<input id="doanhthu" placeholder="Tổng doanh thu">
+<button type="button" onclick="tinhHoahong()">Hoa hồng</button>
+<p id="result"></p>
+<script>
+    function tinhHoahong() {
+        let doanhso = parseInt(document.getElementById('doanhso').value);
+        let doanhthu = parseInt(document.getElementById('doanhthu').value);
+        let phantram;
+        if (doanhso < 30) {
+            phantram = 0.05;
+        } else if (doanhso < 50) {
+            phantram = 0.1;
+        } else {
+            phantram = 0.2;
+        }
+        let hoahong = doanhthu * phantram;
+        document.getElementById('result').innerHTML = 'Hoa hồng nhân viên được nhận : ' + hoahong;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi so can nang</title>
+</head>
+<body>
+<h1>Your BMI score</h1>
+<p></p>
+<label for="weight"></label><input id="weight" placeholder="Enter your weight(kg) ">
+<label for="height"></label><input id="height" placeholder="Enter your height(m) "><br/>
+<button type="button" onclick="BMIcalulation()">BMI</button>
+<script>
+
+    function BMIcalulation() {
+        let weight = parseFloat(document.getElementById("weight").value);
+        let height = parseFloat(document.getElementById("height").value);
+        let bmi = weight / (height * height);
+        if (bmi < 18) {
+            alert("Underweight");
+        } else if (bmi < 25.0) {
+            alert("Normal");
+        } else if (bmi < 30.0) {
+            alert("Overweight");
+        } else {
+            alert("Obese");
+        }
+    }
+</script>
+</body>
+</html>

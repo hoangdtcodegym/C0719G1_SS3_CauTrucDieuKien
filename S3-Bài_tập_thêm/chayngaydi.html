@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Click me</title>
+</head>
+<body onload="auto()">
+<form>
+    <img id="myImage" src="images/nobita1.jpg" style="position: absolute;top: 0px;left: 0px" width="100px"
+         height="80px">
+</form>
+<script>
+    function auto() {
+        let imgObj = document.getElementById('myImage');
+        let maxLeft = window.innerWidth - imgObj.width;
+        let maxTop = window.innerHeight - imgObj.height;
+        setInterval(move, 10, imgObj, maxLeft, maxTop);
+    }
+
+    function move() {
+        let left = parseInt(img.style.left);
+        let top = parseInt(img.style.top);
+        let speed = 5;
+        if (left < maxLeft && top <= 0) {
+            left += speed;
+        } else if (left >= maxLeft && top < maxTop) {
+            top += speed;
+        } else if (left > 0 && top <= maxTop) {
+            left -= speed;
+        } else if (left < 0 && top > 0) {
+            top -= speed;
+        }
+        img.style.left = left + '';
+        img.style.top = top + '';
+    }
+</script>
+</body>
+</html>

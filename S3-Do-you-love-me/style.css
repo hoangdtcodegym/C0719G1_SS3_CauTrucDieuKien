@@ -1,0 +1,17 @@
+h1 {
+    position: absolute;
+    left: 220px;
+    top: 175px;
+}
+
+#ohyes {
+    position: absolute;
+    left: 285px;
+    top: 235px;
+}
+
+#hellno {
+    position: absolute;
+    left: 400px;
+    top: 235px;
+}
