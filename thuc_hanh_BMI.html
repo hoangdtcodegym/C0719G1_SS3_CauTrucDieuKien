@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI chi so suc khoe</title>
+</head>
+<body>
+Height
+<input type="number" id ="hight">cm
+<br><br>
+Weight
+<input type="number" id ='weight'> kg
+<br><br>
+<button type="button" style="color: crimson" onclick="checkBmi()">BMI</button>
+<p id = result></p>
+<script>
+    function checkBmi() {
+        let kq =document.getElementById('result');
+        let hight = Number(document.getElementById('hight').value);
+        let weight = Number(document.getElementById('weight').value);
+        let bmi = weight/(hight*hight/100/100);
+        //alert(bmi);
+        if(bmi < 18){
+            kq.innerHTML = " BMI = " +bmi +" UnderWeight";
+            }else if(bmi < 25){
+                kq.innerHTML = 'BMI = ' +bmi +" Normal";
+             }else if(bmi < 30){
+                kq.innerHTML = 'BMI = ' +bmi +" OverWeight";
+                    }else {
+                    kq.innerHTML = 'BMI =' +bmi +" Obese";
+        }
+    }
+</script>
+</body>
+</html>
