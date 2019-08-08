@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dong ho</title>
+</head>
+<body>
+Nhap gio:
+<input type="text" id="hour"/> gio<br/>
+Nhap phut:
+<input type="text" id="min"/> phut<br/><br/>
+
+<button type="button" onclick="tinh()">Tinh go'c</button>
+<br/><br/>
+Goc giua kim gio va kim phut:
+<p id="kq"></p>
+
+<script>
+    function tinh() {
+        let hour = parseInt(document.getElementById("hour").value);
+        let min = parseInt(document.getElementById("min").value);
+
+        if (hour < 0 || hour > 24 || min < 0 || min > 60) {
+            document.getElementById("kq").innerHTML = "Gio ban nhap khong dung, vui long nhap lai!"
+        } else {
+            hour %= 12;
+            let gocHour = 30 * hour + 0.5 * min;
+            let gocMin = 6 * min;
+            let goc = Math.abs(gocHour - gocMin);
+
+            if (goc <= 180) {
+                document.getElementById("kq").innerHTML = goc + " do";
+            } else {
+                document.getElementById("kq").innerHTML = 360 - goc + " do";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

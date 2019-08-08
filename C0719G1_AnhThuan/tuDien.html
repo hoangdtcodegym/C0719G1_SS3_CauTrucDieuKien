@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu dien</title>
+</head>
+<body>
+
+Nhap vao tu khoa: <br/><br/>
+<input type="text" id="tuKhoa">
+<br/><br/>
+<button type="button" onclick="traCuu()">Tra cuu</button>
+<p id="kq"></p>
+
+<script>
+    function traCuu() {
+        let tuKhoa = document.getElementById("tuKhoa").value;
+        switch (tuKhoa) {
+            case 'cam':
+                document.getElementById("kq").innerHTML = "Day la loai qua ngot, mau vang, dung de an hoac ep nuoc."
+                break;
+            case 'oi':
+                document.getElementById("kq").innerHTML = "Day la loai qua ngot, mau xanh, dung de an voi muoi ot."
+                break;
+            case 'xoai':
+                document.getElementById("kq").innerHTML = "Day la loai qua chua, mau xanh khi chua chin, " +
+                    "ngot, mau vang khi chin dung de an hoac ep nuoc."
+                break;
+            case 'tao':
+                document.getElementById("kq").innerHTML = "Day la loai qua ngot, mau do, dung de an hoac ep nuoc."
+                break;
+            default:
+                document.getElementById("kq").innerHTML = "Tu dien khong co tu ban tim!"
+        }
+    }
+</script>
+
+</body>
+</html>

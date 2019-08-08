@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May tinh</title>
+</head>
+<style type="text/css">
+    .nut, .nut1, .nut2, #but0 {
+        height: 50px;
+        margin: 4px 0px 2px 2px;
+        border-radius: 25px/25px;
+        font-size: larger;
+    }
+
+    .nut {
+        color: white;
+        background-color: dimgrey;
+        width: 50px;
+    }
+
+    .nut1 {
+        background-color: antiquewhite;
+        width: 50px;
+    }
+
+    .nut2 {
+        color: white;
+        background-color: chocolate;
+        width: 50px;
+    }
+
+    #but0 {
+        color: white;
+        background-color: dimgrey;
+        width: 108px;
+    }
+
+    div {
+        text-align: center;
+        background-color: black;
+        width: 234px;
+        height: 392px;
+        margin: auto;
+    }
+
+    #kq {
+        color: white;
+        background-color: black;
+        font-size: 50px;
+        width: 220px;
+        height: 60px;
+        margin: 2px 2px 2px 2px;
+        text-align-last: right;
+    }
+</style>
+<body>
+<form>
+    <fieldset>
+        <legend>May tinh iphone</legend>
+        <div>
+            <br><br>
+            <!-- <p id="kq">0</p> -->
+            <input type="text" value="" id="kq"><br>
+            <button type="button" class="nut1" value="0" onclick="clear1()">AC</button>
+            <button type="button" class="nut1" value="-" onclick="display(this.value)">-</button>
+            <button type="button" class="nut1" value="%" onclick="display(this.value)">%</button>
+            <button type="button" class="nut2" value="/" onclick="display(this.value)">/</button>
+            <br>
+            <button type="button" class="nut" value="7" onclick="display(this.value)">7</button>
+            <button type="button" class="nut" value="8" onclick="display(this.value)">8</button>
+            <button type="button" class="nut" value="9" onclick="display(this.value)">9</button>
+            <button type="button" class="nut2" value="*" onclick="display(this.value)">x</button>
+            <br>
+            <button type="button" class="nut" value="4" onclick="display(this.value)">4</button>
+            <button type="button" class="nut" value="5" onclick="display(this.value)">5</button>
+            <button type="button" class="nut" value="6" onclick="display(this.value)">6</button>
+            <button type="button" class="nut2" value="-" onclick="display(this.value)">-</button>
+            <br>
+            <button type="button" class="nut" value="1" onclick="display(this.value)">1</button>
+            <button type="button" class="nut" value="2" onclick="display(this.value)">2</button>
+            <button type="button" class="nut" value="3" onclick="display(this.value)">3</button>
+            <button type="button" class="nut2" value="+" onclick="display(this.value)">+</button>
+            <br>
+            <button type="button" id="but0" value="0" onclick="display(this.value)">0</button>
+            <button type="button" class="nut" value="." onclick="display(this.value)">,</button>
+            <button type="button" class="nut2" value="" onclick="tinh()">=</button>
+        </div>
+    </fieldset>
+</form>
+<script>
+    function display(number) {
+        let display = document.getElementById("kq");
+        display.value += number;
+    }
+
+    function clear1() {
+        let clear = "";
+        document.getElementById("kq").value = clear;
+    }
+
+    function tinh() {
+        let a = eval(document.getElementById("kq").value);
+        document.getElementById("kq").value = a;
+    }
+</script>
+</body>
+</html>

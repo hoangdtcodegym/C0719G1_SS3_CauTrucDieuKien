@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+
+<style>
+    span {
+        color: red;
+        font-weight: bold;
+    }
+    .log {
+        display: inline;
+        color: black;
+        width: 500px;
+    }
+    .in{
+    }
+</style>
+
+<body>
+<fieldset>
+    <legend>Login:</legend>
+    <p class="log">Username: </p><input class="in" type="text" id="username"><br/>
+    <p class="log">Password: </p><input class="in" type="password" id="password"><br/>
+
+    <button type="button" onclick="login()">Login</button>
+    <br/>
+
+    <p id="kq"></p>
+</fieldset>
+
+<script>
+    function login() {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+        if (username == '') {
+            document.getElementById("kq").innerHTML = "Please input username.";
+        } else if (password == '') {
+            document.getElementById("kq").innerHTML = "Please input password.";
+        } else if (username.length < 6) {
+            document.getElementById("kq").innerHTML = "Username need more than 6 characters.";
+        } else {
+            document.getElementById("kq").innerHTML = "Login Success! <br/> Welcome <span>" + username+ "</span> login success!";
+
+        }
+
+        // if (username !== '') {
+        //     if (password !== '') {
+        //         if (username.length >= 6) {
+        //             document.getElementById("kq").innerHTML = "Login Success!"
+        //         } else {
+        //             document.getElementById("kq").innerHTML = "Username need more than 6 characters.";
+        //         }
+        //     } else {
+        //         document.getElementById("kq").innerHTML = "Please input password.";
+        //     }
+        // } else {
+        //     document.getElementById("kq").innerHTML = "Please input username.";
+        // }
+    }
+</script>
+
+</body>
+</html>

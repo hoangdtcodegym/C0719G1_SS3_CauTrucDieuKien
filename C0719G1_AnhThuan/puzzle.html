@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game puzzle</title>
+</head>
+
+<style>
+    img{
+        width: 200px;
+        height: 280px;
+        margin: 0px 0px 0px 0px;
+    }
+</style>
+
+<body>
+
+<h2>Day la tro choi ghep anh</h2>
+<p>Huong dan: Click vao cac anh cho den khi dung.</p>
+<button type="button" onclick="setAnh()">Bat dau!</button>
+<p id="kq"></p>
+
+<img id="anh1" src="image/anh1.jpg" onclick="chuyenAnh1()">
+<img id="anh2" src="image/anh2.jpg" onclick="chuyenAnh2()"><br/>
+<img id="anh3" src="image/anh3.jpg" onclick="chuyenAnh3()">
+<img id="anh4" src="image/anh4.jpg" onclick="chuyenAnh4()">
+
+<script>
+    function setAnh() {
+        document.getElementById("anh1").src = "image/anh"+ (Math.floor(Math.random()*4)+1) +".jpg";
+        document.getElementById("anh2").src = "image/anh"+ (Math.floor(Math.random()*4)+1) +".jpg";
+        document.getElementById("anh3").src = "image/anh"+ (Math.floor(Math.random()*4)+1) +".jpg";
+        document.getElementById("anh4").src = "image/anh"+ (Math.floor(Math.random()*4)+1) +".jpg";
+
+    }
+    function chuyenAnh1() {
+        document.getElementById("anh1").src = "image/anh"+ (Math.floor(Math.random()*4)+1) +".jpg";
+        console.log(document.getElementById("anh1").src);
+        console.log(document.getElementById("anh2").src);
+        console.log(document.getElementById("anh3").src);
+        console.log(document.getElementById("anh4").src);
+        check1() ;
+    }
+    function chuyenAnh2() {
+        document.getElementById("anh2").src = "image/anh"+ (Math.floor(Math.random()*4)+1) +".jpg";
+        console.log(document.getElementById("anh1").src);
+        console.log(document.getElementById("anh2").src);
+        console.log(document.getElementById("anh3").src);
+        console.log(document.getElementById("anh4").src);
+        check1();
+    }
+    function chuyenAnh3() {
+        document.getElementById("anh3").src = "image/anh"+ (Math.floor(Math.random()*4)+1) +".jpg";
+        console.log(document.getElementById("anh1").src);
+        console.log(document.getElementById("anh2").src);
+        console.log(document.getElementById("anh3").src);
+        console.log(document.getElementById("anh4").src);
+        check1();
+    }
+    function chuyenAnh4() {
+        document.getElementById("anh4").src = "image/anh"+ (Math.floor(Math.random()*4)+1) +".jpg";
+        console.log(document.getElementById("anh1").src);
+        console.log(document.getElementById("anh2").src);
+        console.log(document.getElementById("anh3").src);
+        console.log(document.getElementById("anh4").src);
+        check1();
+    }
+
+    function check1() {
+        if (document.getElementById("anh1").src == "image/anh1.jpg"
+            && document.getElementById("anh2").src == "image/anh2.jpg"
+            && document.getElementById("anh3").src == "image/anh3.jpg"
+            && document.getElementById("anh4").src == "image/anh4.jpg"){
+            document.getElementById("kq").innerHTML = "Chuc mung ban da hoan thanh buc tranh!";
+        } else {
+            document.getElementById("kq").innerHTML = "Chua hoan thanh dau, co len ban!"
+        }
+    }
+</script>
+
+</body>
+</html>
