@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>days_of_month_switch_case</title>
+</head>
+<body>
+<input type="number" id = "months">
+<button type="button" onclick="dayOfMonth()">Days</button>
+<p id = result></p>
+<script>
+    function dayOfMonth() {
+        let month = document.getElementById('months').value;
+        let days;
+        switch (month) {
+            case '1':
+                days = "31 ngay";
+                break;
+            case '2':
+                days = "28 ngay, neu nam nhuan 29 ngay";
+                break;
+            case '3':
+            case '4':
+            case '5':
+            case '6':
+            case '7':
+            case '8':
+            case '9':
+            case '10':
+            case '11':
+            case '12':
+                days = "30 ngay";
+                break;
+            default:
+                days = "Khong co thang nay";
+        }
+     document.getElementById('result').innerHTML = "so ngay trong thang  " +days;
+    }
+</script>
+</body>
+</html>
