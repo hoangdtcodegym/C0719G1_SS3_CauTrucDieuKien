@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>football</title>
+</head>
+<body>
+<img id="fb" src="images/footBall.png" onclick="moveRight()" height="280" width="285"/>
+
+<button type="button" value="Click Me" onclick="moveRight()">Click Me</button>
+<script>
+    let imgObject = document.getElementById('fb');
+    function init() {
+      //  let  imgObject = document.getElementById('fb');
+             imgObject.style.position = 'relative';
+             imgObject.style.left     = '0px';
+    }
+    function moveRight() {
+          imgObject.style.left = parseInt(imgObject.style.left)+30 +'px';
+    }
+
+    window.onload =init();
+</script>
+</body>
+
+</html>
