@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BAI TAP 5</title>
+</head>
+<body>
+<script>
+    let kiemTra = parseInt(prompt("nhap diem kiem tra"));
+    let giuaKy = parseInt(prompt("nhap diem giua ky"));
+    let cuoiKy = parseInt(prompt("nhap diem thi cuoi ky"));
+    trungBinh = (kiemTra + giuaKy * 2 + cuoiKy * 3) / 6;
+    if(trungBinh >= 8){
+        document.write("Gioi");
+        }
+    else if(6.5 <= trungBinh && trungBinh < 8){
+        document.write("Kha");
+    }
+    else if(5 <= trungBinh && trungBinh < 6.5 ){
+        document.write("Trung binh")
+    }
+    else {
+        document.write("Kem");
+    }
+
+</script>
+</body>
+</html>
