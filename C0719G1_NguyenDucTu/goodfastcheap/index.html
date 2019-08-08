@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Good fast cheap</title>
+</head>
+<body>
+Good: <input type="range" name="good" value="1" min="1" max="2" id="good" onclick="check(1);"> <br>
+Fast: <input type="range" name="fast" value="1" min="1" max="2" id="fast" onclick="check(2);"> <br>
+Cheap: <input type="range" name="cheap" value="1" min="1" max="2" id="cheap" onclick="check(3);"> <br>
+
+<script>
+
+    function check(num) {
+        let a = document.getElementById("good").value;
+        let b = document.getElementById("fast").value;
+        let c = document.getElementById("cheap").value;
+        switch (num) {
+            case 1:
+                if (a == b && a == 2) {
+                    document.getElementById("cheap").value = 1;
+                }
+                else if (a == c && a == 2) {
+                    document.getElementById("fast").value = 1;
+                }
+                break;
+            case 2:
+                if (b == c && b == 2) {
+                    document.getElementById("good").value = 1;
+                }
+                else if (b == a && b == 2) {
+                    document.getElementById("cheap").value = 1;
+                }
+                break;
+            case 3:
+                if (c == a && c == 2) {
+                    document.getElementById("fast").value = 1;
+                }
+                else if (c == b && c == 2 ) {
+                    document.getElementById("good").value = 1;
+                }
+                break;
+        }
+    }
+</script>
+</body>
+</html>
