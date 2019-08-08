@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+
+</head>
+<body>
+<table>
+    <tr>
+    <td><img id="part1" alt="cat1" src="hinhanh/cat1_part1.jpg" width="800" height="160" onclick="randomImg(1)"></td>
+    </tr><tr>
+    <td><img id="part2" alt="monkey" src="hinhanh/monkey_part2.jpg" width="800" height="160" onclick="randomImg(2)"></td>
+    </tr><tr>
+    <td><img id="part3" alt="panda" src="hinhanh/panda_part3.jpg" width="800" height="160" onclick="randomImg(3)"></td>
+    </tr><tr>
+    <td><img id="part4" alt="cat1" src="hinhanh/cat1_part4.jpg" width="800" height="160" onclick="randomImg(4)"></td>
+    </tr><tr>
+    <td><img id="part5" alt="panda" src="hinhanh/panda_part5.jpg" width="800" height="160" onclick="randomImg(5)"></td>
+    </tr>
+</table>
+<script>
+    let array=['cat1','monkey','panda'];
+    function randomImg(part) {
+        let random = Math.floor(Math.random() * array.length);
+        let baseName = array[random];
+        let name = baseName + '_part' + part;
+        let partImg = document.getElementById('part' + part);
+        partImg.src = 'hinhanh/' + name + '.jpg';
+        partImg.alt = baseName;
+        show();
+    }
+    function show() {
+
+        let alt1= document.getElementById('part1').alt.trim();
+        let alt2= document.getElementById('part2').alt.trim();
+        let alt3= document.getElementById('part3').alt.trim();
+        let alt4= document.getElementById('part4').alt.trim();
+        let alt5= document.getElementById('part5').alt.trim();
+        if(alt1==alt2&&alt2==alt3&&alt3==alt4&&alt4==alt5)
+            alert('Verry Good');
+    }
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label >User: <input id="user" type="text"></label>
+<br><br>
+<label>Password :<input id="pass" type="password"></label>
+<br><br>
+<button id="log" onclick="input()">Login</button>
+<script>
+    function input() {
+        let us=document.getElementById('user').value;
+        let pa=document.getElementById('pass').value;
+
+        if(us==''){
+            alert('Please input username.');
+        }else if(us.length<6){
+            alert('username need more then 6 chater');
+        }else if(pa==''){
+            alert('Please input password');
+        }else
+            login();
+    }
+    function login() {
+        alert('Login server');
+    }
+</script>
+
+</body>
+</html>
