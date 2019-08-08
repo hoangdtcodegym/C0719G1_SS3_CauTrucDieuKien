@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tra cuu thong tin</title>
+</head>
+<body>
+<input type="text" id="ip"><br>
+<button onclick="traCuu()">Tra cứu</button>
+<br>
+<!--<img src="" id="img">-->
+<p id="show">Kết quả</p>
+</body>
+<script>
+    function traCuu() {
+        let img = document.getElementById("img").value;
+        let input = document.getElementById("ip").value;
+        switch (input) {
+            case "chó" :
+                document.getElementById("show").innerHTML = "Chó hay Chó nhà Danh pháp khoa học: Canis lupus familiaris hoặc Canis familiaris; từ Hán Việt gọi là cẩu ";
+                // img.src = 'chó.jpg';
+                break;
+            case "hổ" :
+                document.getElementById("show").innerHTML = "Hổ, còn gọi là cọp, hùm, kễnh, khái, ông ba mươi hay chúa sơn lâm ";
+                break;
+                // img.src = "Hổ.jpeg";
+            case "cò" :
+                document.getElementById("show").innerHTML = "Cò ở trong nhiều khu vực và có xu hướng sống trong môi trường khô hơn.";
+                break;
+                // img.src = "cò.jp"
+            default:
+                document.getElementById("show").innerHTML = "Không có dữ liệu";
+                break;
+        }
+
+    }
+</script>
+</html>
