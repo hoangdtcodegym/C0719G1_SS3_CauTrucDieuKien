@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game_Puzzle</title>
+</head>
+<body>
+<table >
+    <tr>
+        <td>
+                <img alt ="image1_Part" src="images/image1_Part1.jpg" id ="part1" onclick="changeImage(1)" width="500" height="150">
+        </td>
+    <tr>
+            <td>
+                <img alt ="image2_Part" src="images/image3_Part2.jpg" id ="part2" onclick="changeImage(2)" width="500" height="150">
+            </td>
+    <tr>
+            <td>
+                <img alt ="image3_Part" src="images/image5_Part3.jpg" id ="part3" onclick="changeImage(3)" width="500" height="150">
+            </td>
+    </tr>
+            <td>
+                <img alt ="image4_Part" src="images/image4_Part4.jpg" id ="part4" onclick="changeImage(4)" width="500" height="150">
+            </td>
+    <tr>
+            <td>
+                <img alt ="image5_Part" src="images/image2_Part5.jpg" id ="part5" onclick="changeImage(5)" width="500" height="150">
+            </td>
+    </tr>
+</table>
+<script>
+function changeImage(part) {
+    let arrayImages = ["image1_Part", "image2_Part", "image3_Part", "image4_Part", "image5_Part","image6_Part"];
+    let rand        = Math.floor(Math.random()*(arrayImages.length));
+    let partImage   = document.getElementById("part"+part);
+    let baseName    = arrayImages[rand];
+    let name        = baseName + part;
+    partImage.src   = "images/"+name+".jpg";
+    partImage.alt   = baseName;
+     checkTrue();
+}
+function checkTrue(){
+
+
+    let alt1 = document.getElementById("part1").alt.trim();
+    let alt2 = document.getElementById("part2").alt.trim();
+    let alt3 = document.getElementById("part3").alt.trim();
+    let alt4 = document.getElementById("part4").alt.trim();
+    let alt5 = document.getElementById("part5").alt.trim();
+       if(alt1==alt2 && alt2==alt3 && alt3==alt4 && alt4==alt5){
+            alert(" Successfull: have fun.  he he he");
+        }
+}
+</script>
+</body>
+</html>
