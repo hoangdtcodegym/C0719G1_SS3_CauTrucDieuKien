@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Puzze</title>
+</head>
+<style>
+    table{
+        border: 3px solid white;
+        box-shadow: 3px 3px blue;
+    }
+    img{
+        height: 160px ;
+        width: 800px ;
+    }
+</style>
+<body>
+<table id = "mauvien">
+    <tr>
+        <td>
+            <img id="img1" src="cat1.jpg"  onclick="chuyenAnh(1)"  alt="cat1">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img id="img2" src="cat2.jpg" onclick="chuyenAnh(2)"  alt="cat2">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img id="img3" src="cat3.jpg" onclick="chuyenAnh(3)"  alt="cat3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img id="img4" src="cat4.jpg" onclick="chuyenAnh(4)"  alt="cat4">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img id="img5" src="cat5.jpg" onclick="chuyenAnh(5)"  alt="cat5">
+        </td>
+    </tr>
+</table>
+</body>
+<script>
+    function chuyenAnh(index) {
+        let img = document.getElementById("img"+index);
+        switch (img.alt) {
+            case "cat"+index:
+                img.alt = "gau"+index;
+                break;
+            case "gau"+index:
+                img.alt = "khi"+index;
+                break;
+            case "khi"+index:
+                img.alt = "cat"+index;
+                break;
+        }
+        img.src = img.alt + ".jpg";
+        check();
+    }
+
+    function check() {
+        let img1 = document.getElementById("img1");
+        let img2 = document.getElementById("img2");
+        let img3 = document.getElementById("img3");
+        let img4 = document.getElementById("img4");
+        let img5 = document.getElementById("img5");
+        if((img1.alt === "cat1" && img2.alt=== "cat2"&& img3.alt === "cat3" && img4.alt === "cat4"&& img5.alt==="cat5") ||
+            (img1.alt === "gau1" && img2.alt=== "gau2"&& img3.alt === "gau3" && img4.alt === "gau4"&& img5.alt==="gau5") ||
+            (img1.alt === "khi1" && img2.alt=== "khi2"&& img3.alt === "khi3" && img4.alt === "khi4"&& img5.alt==="khi5"))
+        {
+            document.getElementById("mauvien").style.boxShadow = "red 4px 4px 9px";
+
+        } else {
+            document.getElementById("mauvien").style.boxShadow = "blue 3px 3px";
+        }
+
+
+    }
+</script>
+</html>
