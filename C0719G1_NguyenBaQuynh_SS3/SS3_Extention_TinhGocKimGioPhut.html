@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính góc kim giờ phút</title>
+</head>
+<script>
+    function tinhGoc(){
+        let gio=parseInt(prompt("Nhập số giờ:",""));
+        let phut=parseInt(prompt("Nhập số phút:",""));
+        if(phut>=0 && gio >=0){
+            if(phut>=60){
+                gio +=Math.trunc(phut/60);
+                phut %=60;
+            }
+            if(gio>=12){
+                gio %=12;
+            }
+            let gocPhut=phut*6;
+            let gocGio=gio*30 + gocPhut/12;
+            let gocLech=Math.abs(gocGio-gocPhut);
+            let gocLechBu=360-gocLech;
+            alert("Góc lệch giỡ kim giờ và kim phut là:" + gocLech + "   Góc bù là: "+ gocLechBu);
+
+        }else{
+            alert("Giá trị nhập không hợp lệ!");
+        }
+
+    }
+</script>
+<body onload="tinhGoc()">
+
+</body>
+</html>

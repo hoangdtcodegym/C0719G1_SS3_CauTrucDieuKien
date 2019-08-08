@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dua Xe</title>
+    </head>
+<body onload="auto()">
+<img id="nobita1" src="images/nobita1.png" style="position:absolute;left:0px; top:0px;" height="100" width="80"/>
+<script>
+    function auto(){
+        let img=document.getElementById("nobita1");
+        let maxTop=window.innerHeight-img.height;
+        let maxLeft=window.innerWidth-img.width;
+        setInterval(run,10,img,maxTop,maxLeft);
+    }
+
+    function run(image, maxTop, maxLeft){
+        let left=parseInt(image.style.left);
+        let top=parseInt(image.style.top);
+        if(left<maxLeft && top <=0 ){
+            left+=5;
+        }else if(left >=maxLeft && top < maxTop){
+            top+=5;
+        }else if(left > 0 && top >= maxTop){
+            left -=5;
+        }else if(left <=0 && top > 0){
+            top -=5;
+        }
+        image.style.top=top +"px";
+        image.style.left=left+"px";
+    }
+
+</script>
+
+</body>
+</html>
