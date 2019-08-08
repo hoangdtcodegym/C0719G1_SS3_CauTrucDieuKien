@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me</title>
+
+</head>
+<body>
+<h1 style="color: crimson; position: absolute; left: 400px; top: 250px;"> Do You Love Me ?
+</h1>
+<button style="position: absolute; top: 330px; left: 440px;color: darkred;" type="button" onclick="clickYes()" value ="YES">YES </button>
+<button type="button" style="position: absolute; top:330px; left: 580px; color: darkred; padding-right: auto" id="buttonNo" value="NO" onmouseover="noHover()">NO</button>
+<script>
+    function clickYes() {
+        alert(' I LOVE YOU, TOO ');
+    }
+    function noHover() {
+        let moveX = Math.round(Math.random(0,1)*window.innerWidth);
+        let moveY = Math.round(Math.random(0,1)*window.innerHeight);
+        document.getElementById('buttonNo').style.left = moveX+ 'px';
+        document.getElementById('buttonNo').style.top  = moveY+'px';
+    }
+</script>
+</body>
+</html>
