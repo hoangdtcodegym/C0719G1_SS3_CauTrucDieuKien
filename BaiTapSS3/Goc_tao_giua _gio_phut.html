@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim goc giua kim gio va phut</title>
+</head>
+<body>
+    <script>
+        let a =prompt("Nhap gio");
+        let b = prompt("Nhap phut");
+        if (b<60) {
+            if (a < 12) {
+                let c = b * 6 - a * 30 - b / 2;
+                if (Math.abs(c) < 180) {
+                    alert(Math.abs(c));
+                } else {
+                    alert(360 - Math.abs(c));
+                }
+            } else if (a < 24) {
+                let c = b * 6 - (a - 12) * 30 - b / 2;
+                if (Math.abs(c) < 180) {
+                    alert(Math.abs(c));
+                } else {
+                    alert(360 - Math.abs(c));
+                }
+            } else {
+                alert("Thoi gian khong dung");
+            }
+        }else {
+            alert("Thoi gian khong dung");
+        }
+
+
+    </script>
+
+</body>
+</html>

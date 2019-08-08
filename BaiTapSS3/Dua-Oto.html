@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dua Oto</title>
+</head>
+<body onload="runfast()">
+    <img id="img" src="img/oto.jpg" style="width: 150px; height: 100px;left: 0; top: 0; position: absolute;">
+<script>
+    function runfast() {
+        let maxWidth = window.innerWidth - 150;
+        let maxHeight = window.innerHeight - 100;
+        let run = document.getElementById('img');
+        let autorun = setInterval(running, 200,maxWidth,maxHeight,run);
+    }
+        function running(maxWidth, maxHeight,run) {
+            if (parseInt(run.style.left) < maxWidth && parseInt(run.style.top) == 0) {
+                run.src = "img/oto.jpg";
+                run.style.left = parseInt(run.style.left) + 100 + 'px';
+            } else if (parseInt(run.style.top) < maxHeight && parseInt(run.style.left) >= maxWidth) {
+                run.src = "img/php.png";
+                run.style.top = parseInt(run.style.top) + 100 + 'px';
+            } else if (parseInt(run.style.left) != 0) {
+                run.src = "img/java.png";
+                run.style.left = parseInt(run.style.left) - 100 + 'px';
+            } else {
+                run.src = "img/html.png";
+                run.style.top = parseInt(run.style.top) - 100 + 'px';
+            }
+            // if (parseInt(run.style.left)==0 && parseInt(run.style.top)==0 ){
+            //     clearInterval(autorun);
+            // }
+        }
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do You Love Me</title>
+</head>
+<body>
+<table>
+    <h1>Do You Love Me</h1>
+
+        <button onclick="loveMe()">Yes</button>
+        <button onmouseover="hateMe()" id="hate" style="position: absolute;">No</button>
+
+</table>
+    <script>
+        function loveMe() {
+            alert('<3');
+        }
+        function hateMe() {
+            let maxHeight= window.innerHeight;
+            let maxWidth=window.innerWidth;
+            let change=document.getElementById('hate');
+            let randomHeight=Math.floor(Math.random()*maxHeight);
+            let randomWidth=Math.floor(Math.random()*maxWidth);
+            change.style.left=randomWidth +"px";
+            change.style.top=randomHeight + "px";
+            console.log(change.style.left);
+            console.log(change.style.top);
+
+        }
+    </script>
+</body>
+</html>

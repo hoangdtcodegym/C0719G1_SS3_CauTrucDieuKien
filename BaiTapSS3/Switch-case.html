@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch Case</title>
+
+</head>
+<body>
+    <input id="input" >
+    <button onclick="seach()">Seach</button>
+    <p id="result">Result: </p>
+    <img id="img" src="" >
+    <script>
+        function seach() {
+            let keyword=document.getElementById('input').value;
+            switch (keyword) {
+                case 'Javascript':
+                    document.getElementById('result').innerHTML = "Result: Day la ngon ngu lap trinh Javascript";
+                    document.getElementById('img').src= 'img/javascript.png';
+                    break;
+                case 'PHP':
+                    document.getElementById('result').innerHTML = "Result: Day la ngon ngu lap trinh web PHP";
+                    document.getElementById('img').src= 'img/php.png';
+                    break;
+                case 'Java':
+                    document.getElementById('result').innerHTML = "Result: Day la ngon ngu lap trinh Java";
+                    document.getElementById('img').src= 'img/java.png';
+                    break;
+                case 'Html':
+                    document.getElementById('result').innerHTML = "Result: Day la ngon ngu danh dau van ban";
+                    document.getElementById('img').src= 'img/html.png';
+                    break;
+                case 'Css':
+                    document.getElementById('result').innerHTML = "Result: Day la ngon ngu dinh kieu HTML";
+                    document.getElementById('img').src='img/css.png';
+                    break;
+                default:
+                    document.getElementById('result').innerHTML=" Tu nay khong co trong tu dien ^^";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
