@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<input type="text" id ="hour">Nhap gio</br>
+<input type="text" id ="minutes">Nhap Phut</br>
+<button type="button" onclick="result()">Tinh</button>
+<p id = "result"></p>
+</body>
+
+<script>
+    function result () {
+        let hour = parseInt(document.getElementById("hour").value);
+        let minutes = parseInt(document.getElementById("minutes").value);
+        if (hour < 0 || hour > 24 || minutes < 0 || minutes > 60 ){
+            document.getElementById("result").innerHTML = "Nhap sai";
+        }else {
+            hour %=12;
+            let gocHour = 30 * hour + 0.5 * minutes;
+            let gocMinutes = 6 * minutes;
+            let gocLech =   Math.abs(gocHour - gocMinutes);
+            if (gocLech <= 180){
+                document.getElementById("result").innerHTML = gocLech + "do";
+            }else {
+                document.getElementById("result").innerHTML = 360 - gocLech + "do";
+            }
+        }
+    }
+</script>
+</html>
