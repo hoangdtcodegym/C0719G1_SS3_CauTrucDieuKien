@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Su Kien Ban Phim</title>
+
+</head>
+<body onload="docReady()">
+    <img src="ronaldo.jpg" id="brazil" style=" position: absolute; top: 100px; left: 100px; width: 160px; height: 200px;" />
+    <script>
+        function upArrowPressed() {
+            let element = document.getElementById("brazil");
+            element.style.top=parseInt(element.style.top) - 10 + 'px';
+            console.log('thay doi top');
+        }
+        function dowArrowPressed() {
+            let element = document.getElementById("brazil");
+            element.style.top=parseInt(element.style.top) + 10 + 'px';
+            console.log('thay doi down');
+        }
+        function leftArrowPressed() {
+            let element = document.getElementById("brazil");
+            element.style.left=parseInt(element.style.left) - 10 + 'px';
+            console.log('thay doi left');
+        }
+        function rightArrowPressed() {
+            let element = document.getElementById("brazil");
+            element.style.left=parseInt(element.style.left) + 10 + 'px';
+            console.log('thay doi right');
+
+        }
+        function moveSelection(number) {
+            switch ((number.keyCode)) {
+                case 37:
+                    leftArrowPressed();
+                    break;
+                case 39:
+                    rightArrowPressed();
+                    break;
+                case 38:
+                    upArrowPressed();
+                    break;
+                case 40:
+                    dowArrowPressed();
+                    break;
+
+            }
+            console.log('keycode');
+        }
+        function docReady() {
+            window.addEventListener('keydown', moveSelection);
+            console.log("nhan phim");
+        }
+
+    </script>
+</body>
+</html>

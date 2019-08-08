@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oto</title>
+</head>
+<body onload="running()">
+    <img id="fast" src="img/oto.jpg" style="width: 150px; height: 100px;top: 0; left: 0; position: absolute;"  >
+    <script>
+        let maxWidth=window.innerWidth - 150;
+        let maxHeight=window.innerHeight - 100;
+        let run = document.getElementById('fast');
+        let start = setInterval(running, 200);
+        function running() {
+            if (parseInt(run.style.left) <maxWidth && parseInt(run.style.top)==0){
+                run.style.left= parseInt(run.style.left) + 10 + "px";
+            } else if (parseInt(run.style.top)< maxHeight && parseInt(run.style.left)>= maxWidth){
+                run.style.top = parseInt(run.style.top) + 10 + "px";
+            }else if (parseInt(run.style.left) != 0){
+                run.style.left = parseInt(run.style.left) - 10 + "px";
+            }else {
+                run.style.top = parseInt(run.style.top) - 10 + "px";
+            }
+        }
+    </script>
+</body>
+</html>

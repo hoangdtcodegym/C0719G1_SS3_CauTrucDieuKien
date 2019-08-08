@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+
+</head>
+<body>
+    <table>
+        <tr>
+            <td><img id="part1" onclick="changeImg(1)" src="img/kaka_part1.png" alt="kaka_part" style="width: 200px ; height: 150px;"></td>
+        </tr>
+        <tr>
+            <td><img id="part2" onclick="changeImg(2)" src="img/ronaldo_part2.png" alt="ronaldo_part" style="height: 150px; width: 200px;"></td>
+        </tr>
+        <tr>
+            <td><img id="part3" onclick="changeImg(3)" src="img/ronaldinho_part3.png" alt="ronaldinho_part" style="width: 200px; height: 150px;"></td>
+        </tr>
+    </table>
+    <script>
+        let arrImg=["kaka_part", "ronaldo_part", "ronaldinho_part"];
+        function changeImg(part) {
+            let random= Math.floor(Math.random()*arrImg.length);
+            let partImg = document.getElementById( "part"+ part);
+            let baseName= arrImg[random];
+            let name = baseName + part;
+            partImg.src="img/" +name + ".png";
+            partImg.alt=baseName;
+            checkfull();
+
+        }
+            function checkfull() {
+                let alt1=document.getElementById('part1').alt.trim();
+                let alt2=document.getElementById('part2').alt.trim();
+                let alt3=document.getElementById('part3').alt.trim();
+                if (alt1==alt2&& alt2==alt3){
+                    alert('Images full');
+                }
+            }
+    </script>
+</body>
+</html>
+
+
+</body>
+</html>
