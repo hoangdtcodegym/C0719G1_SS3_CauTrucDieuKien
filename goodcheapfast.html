@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<form lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+        background-color: gainsboro;
+    }
+    .switch.switch1{
+         -webkit-appearance: none;
+         appearance: none;
+         width: 120px;
+         height: 40px;
+         background-color: #c6c6c6;
+         border-radius: 40px;
+         border: 1px solid gray;
+         outline: none;
+         position: absolute; left: 100px; top: 100px
+     }
+    .switch1:checked{
+        background-color: mediumseagreen;
+        border: 1px solid mediumseagreen;
+    }
+    .switch1:before{
+        content: '';
+        width: 42px;
+        height: 42px;
+        position: absolute;
+        background-color: green;
+        border-radius: 50%;
+        top: 0px;
+        left: 0px;
+        transition: 200ms;
+    }
+    .switch1:checked:before{
+        left: 78px;
+    }
+    .switch.switch2{
+        -webkit-appearance: none;
+        appearance: none;
+        width: 120px;
+        height: 40px;
+        background-color: #c6c6c6;
+        border-radius: 40px;
+        border: 1px solid gray;
+        outline: none;
+        position: absolute;left: 100px; top: 200px
+    }
+    .switch2:checked{
+        background-color: cornflowerblue;
+        border: 1px solid cornflowerblue;
+    }
+    .switch2:before{
+        content: '';
+        width: 42px;
+        height: 42px;
+        position: absolute;
+        background-color: blue;
+        border-radius: 50%;
+        top: 0px;
+        left: 0px;
+        transition: 200ms;
+    }
+    .switch2:checked:before{
+        left: 78px;
+    }
+    .switch.switch3{
+        -webkit-appearance: none;
+        appearance: none;
+        width: 120px;
+        height: 40px;
+        background-color: #c6c6c6;
+        border-radius: 40px;
+        border: 1px solid gray;
+        outline: none;
+        position: absolute;left: 100px; top: 300px
+    }
+    .switch3:checked{
+        background-color: lightcoral;
+        border: 1px solid lightcoral;
+    }
+    .switch3:before{
+        content: '';
+        width: 42px;
+        height: 42px;
+        position: absolute;
+        background-color: tomato;
+        border-radius: 50%;
+        top: 0px;
+        left: 0px;
+        transition: 200ms;
+    }
+    .switch3:checked:before{
+        left: 78px;
+    }
+</style>
+<body>
+<input id= "s1" type="checkbox" class="switch switch1" onclick="good()" >
+<input id = "s2" type="checkbox" class="switch switch2" onclick="cheap()" >
+<input id = "s3" type="checkbox" class="switch switch3" onclick="fast()" >
+<p style="font-size:35px; position: absolute; left: 250px; top: 67px">GOOD</p>
+<p style="font-size:35px; position: absolute; left: 250px; top: 167px">CHEAP</p>
+<p style="font-size:35px; position: absolute; left: 250px; top: 267px">FAST</p>
+</body>
+    <script>
+        function good() {
+            if ((document.getElementById("s1").checked = true) && (document.getElementById("s2").checked = true)) {
+                document.getElementById("s3").checked = false;
+            }else if ((document.getElementById("s1").checked= true)&&(document.getElementById("s3").checked= true)){
+                document.getElementById("s2").checked= false;
+            }else{
+                document.getElementById("s2").checked= true;
+                document.getElementById("s3").checked= true;
+            }
+        }
+        function cheap() {
+            if ((document.getElementById("s2").checked = true) && (document.getElementById("s3").checked = true)) {
+                document.getElementById("s1").checked = false;
+            }else if ((document.getElementById("s2").checked= true)&&(document.getElementById("s1").checked= true)){
+                document.getElementById("s3").checked= false;
+            }else{
+                document.getElementById("s1").checked= true;
+                document.getElementById("s3").checked= true;
+            }
+        }
+        function fast() {
+            if ((document.getElementById("s3").checked = true) && (document.getElementById("s1").checked = true)) {
+                document.getElementById("s2").checked = false;
+            }else if ((document.getElementById("s3").checked= true)&&(document.getElementById("s2").checked= true)){
+                document.getElementById("s1").checked= false;
+            }else{
+                document.getElementById("s1").checked= true;
+                document.getElementById("s2").checked= true;
+            }
+        }
+    </script>
+</html>

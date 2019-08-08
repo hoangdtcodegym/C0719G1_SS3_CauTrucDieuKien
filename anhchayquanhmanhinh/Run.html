@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="setInterval(run)">
+<img src="nobita.jpg" id = "nobita" style="position: absolute; left: 0px ;top:0px; width: 80px ;height: 80px "/>
+</body>
+<script>
+    let maxTop = window.innerHeight;
+    let maxLeft = window.innerWidth;
+    let change= false;
+    function run() {
+        let element = document.getElementById("nobita");
+        let left = parseInt(element.style.left);
+        let top = parseInt(element.style.top);
+        if (!change) {
+            if (left < maxLeft - 80) {
+                left += 10;
+            }else if(top < maxTop-80){
+                top += 5;
+            }else{
+                change= true;
+            }
+        }
+        if (change){
+            if (left > 0){
+                left -= 5;
+            } else if (top > 0){
+                top -= 5 ;
+            }else{
+                change= false;
+                }
+            }
+
+        element.style.left= left+ 'px';
+        element.style.top= top+ 'px';
+    }
+
+</script>
+</html>

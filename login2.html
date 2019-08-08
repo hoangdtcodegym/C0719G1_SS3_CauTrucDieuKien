@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+
+    Usename:<br>
+    <input id = "usename" type="text" onchange="checkName()" value=""/>
+    <br>
+    <p id = "undername" ></p><br>
+    Password:<br>
+    <input id = "password" type = "text" onchange="checkPass()" value=""/><br>
+    <p id = "underpass"></p><br>
+    <button type="button" onclick="checkLogin()">Login</button>
+
+<script>
+    function checkName() {
+        let nhapten = (document.getElementById("usename").value.trim()).length;
+         if(nhapten == 0){
+            document.getElementById("undername").innerHTML = " Vui lòng nhập tên";
+    }else if(nhapten<7){
+             document.getElementById("undername").innerHTML = " Tên ít nhât 7 kí tự, vui lòng nhập lại";
+         }
+    }
+    function checkPass() {
+        let nhappass = (document.getElementById("password").value.trim()).length;
+        if(nhappass <= 6){
+            document.getElementById("underpass").innerHTML= "Password quá ngắn vui lòng nhập lại";
+        }
+    }
+    function checkLogin() {
+
+    }
+</script>
+</body>
+</html>

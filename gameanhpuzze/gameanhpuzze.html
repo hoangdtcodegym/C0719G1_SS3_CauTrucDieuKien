@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Puzze</title>
+</head>
+<style>
+    img{
+        width: 450px;
+        height: 100px;
+        display: block;
+        border: 3px solid white;
+    }
+</style>
+<body>
+<table>
+<img id="img1" src="cat1.jpg" onclick="chuyenAnh(1)" style="box-shadow: cornflowerblue 4px 4px 9px" alt="cat1">
+<img id="img2" src="cat2.jpg" onclick="chuyenAnh(2)" style="box-shadow: cornflowerblue 4px 4px 9px" alt="cat2">
+<img id="img3" src="cat3.jpg" onclick="chuyenAnh(3)" style="box-shadow: cornflowerblue 4px 4px 9px" alt="cat3">
+<img id="img4" src="cat4.jpg" onclick="chuyenAnh(4)" style="box-shadow: cornflowerblue 4px 4px 9px" alt="cat4">
+<img id="img5" src="cat5.jpg" onclick="chuyenAnh(5)" style="box-shadow: cornflowerblue 4px 4px 9px" alt="cat5">
+</table>
+</body>
+<script>
+    function chuyenAnh(index) {
+       let img = document.getElementById("img"+index);
+       switch (img.alt) {
+           case "cat"+index:
+               img.alt = "gau"+index;
+               break;
+           case "gau"+index:
+               img.alt = "khi"+index;
+               break;
+           case "khi"+index:
+               img.alt = "cat"+index;
+               break;
+       }
+       img.src = img.alt + ".jpg";
+       check();
+    }
+
+    function check() {
+        let img1 = document.getElementById("img1");
+        let img2 = document.getElementById("img2");
+        let img3 = document.getElementById("img3");
+        let img4 = document.getElementById("img4");
+        let img5 = document.getElementById("img5");
+        if((img1.alt === "cat1" && img2.alt=== "cat2"&& img3.alt === "cat3" && img4.alt === "cat4"&& img5.alt==="cat5") ||
+            (img1.alt === "gau1" && img2.alt=== "gau2"&& img3.alt === "gau3" && img4.alt === "gau4"&& img5.alt==="gau5") ||
+            (img1.alt === "khi1" && img2.alt=== "khi2"&& img3.alt === "khi3" && img4.alt === "khi4"&& img5.alt==="khi5"))
+        {
+          img1.style.boxShadow = "red 4px 4px 9px";
+          img2.style.boxShadow = "red 4px 4px 9px";
+          img3.style.boxShadow = "red 4px 4px 9px";
+          img4.style.boxShadow = "red 4px 4px 9px";
+          img5.style.boxShadow = "red 4px 4px 9px";
+
+        } else {
+            img1.style.boxShadow = "blue 4px 4px 9px";
+            img2.style.boxShadow = "blue 4px 4px 9px";
+            img3.style.boxShadow = "blue 4px 4px 9px";
+            img4.style.boxShadow = "blue 4px 4px 9px";
+            img5.style.boxShadow = "blue 4px 4px 9px";
+        }
+
+
+    }
+</script>
+</html>
