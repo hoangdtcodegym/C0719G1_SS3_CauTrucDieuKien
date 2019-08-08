@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simplpe calcultor</title>
+    <link rel="stylesheet" type="text/css" href="calculatorsimple.css">
+</head>
+<body>
+<div id="cal">
+    <div><input id="results"></input></div>
+    <div id="keyboard">
+        <button class="number" id="1" value="1" onclick="getOutpot(this.value)">1</button>
+        <button class="number" id="2" value="2" onclick="getOutpot(this.value)">2</button>
+        <button class="number" id="3" value="3" onclick="getOutpot(this.value)">3</button>
+        <button class="opeator" id="+" value="+" onclick="getOutpot(this.value)">+</button>
+        <button class="number" id="4" value="4" onclick="getOutpot(this.value)">4</button>
+        <button class="number" id="5" value="5" onclick="getOutpot(this.value)">5</button>
+        <button class="number" id="6" value="6" onclick="getOutpot(this.value)">6</button>
+        <button class="opeator" id="-" value="-" onclick="getOutpot(this.value)">-</button>
+        <button class="number" id="7" value="7" onclick="getOutpot(this.value)">7</button>
+        <button class="number" id="8" value="8" onclick="getOutpot(this.value)">8</button>
+        <button class="number" id="9" value="9" onclick="getOutpot(this.value)">9</button>
+        <button class="opeator" id="x" value="*" onclick="getOutpot(this.value)">x</button>
+        <button class="opeator" onclick="clear()">C</button>
+        <button class="number" id="0" value="0" onclick="getOutpot(this.value)">0</button>
+        <button class="opeator" onclick="results()">=</button>
+        <button class="opeator" id="/" value="/" onclick="">/</button>
+    </div>
+</div>
+</body>
+<script>
+    let op = document.getElementById("results");
+    function getOutpot(value) {
+        op.value += value;
+    }
+
+    function clear() {
+        op.value == '';
+    }
+    function results() {
+        op.value = eval (op.value);
+    }
+    function clear1() {
+        let op1 = op.value;
+        let a = op1.length;
+        op1 = op1.substring(0, a -1);
+        op.value = op1;
+    }
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle</title>
+</head>
+<body>
+<table border="0px" width="760px" cellpadding="0px" cellspacing="0px">
+    <tr>
+        <td><img id="part1" alt="a_part" src="img/a_part1.png" onclick="changePic(1)" width="100%" height="100%"></td>
+    </tr>
+    <tr>
+        <td><img id="part2" alt="a_part" src="img/b_part2.png" onclick="changePic(2)" width="100%" height="100%"></td>
+    </tr>
+    <tr>
+        <td><img id="part3" alt="a_part" src="img/c_part3.png" onclick="changePic(3)" width="100%" height="100%"></td>
+    </tr>
+</table>
+<script>
+    let arrImg = ["a_part","b_part","c_part"]
+    function changePic(part) {
+        let radom = Math.floor(Math.random()*(arrImg.length));
+        let partImg = document.getElementById("part"+part);
+        let baseName = arrImg [radom];
+        let name = baseName + part;
+        partImg.src = "img/" + name + ".png";
+        partImg.alt = baseName ;
+        checkFull();
+    }
+    function checkFull() {
+        let alt1 = document.getElementById("part1").alt.trim();
+        let alt2 = document.getElementById("part2").alt.trim();
+        let alt3 = document.getElementById("part3").alt.trim();
+        if (alt1 == alt2 && alt2 == alt3 && alt3 == alt4){
+                alert("Very Good!");
+        }
+    }
+
+</script>
+</body>
+</html>
