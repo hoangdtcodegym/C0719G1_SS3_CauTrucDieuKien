@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chay Chay Chay</title>
+</head>
+<body onload="auto()">
+
+<img id ="nobita" src="images/nobita.jpg" style="position: absolute; left: 0px; top: 0px;"
+     height="100px" width="80px"/>
+
+<script>
+function auto() {
+    let img = document.getElementById("nobita");
+    let maxLeft = window.innerWidth - img.width;
+    let maxTop = window.innerHeight - img.height;
+    setInterval(run, 42, img, maxLeft, maxTop);
+}
+//img, maxLeft, maxTop o tren la bien khai bao san, dung de truyen vao ham
+//img, maxLeft, maxTop o duoi la tham so cua ham
+// 2 cai tren va duoi co the dat ten khac nhau, ko phai la 1!!!
+
+function run(img, maxLeft, maxTop) {
+    let left = parseInt(img.style.left);
+    let top = parseInt(img.style.top);
+    let speed = 5;
+    if (left < maxLeft && top <= 0) {
+        left += speed;
+    } else if(left >= maxLeft && top < maxTop) {
+        top += speed;
+    } else if(left > 0 && top >= maxTop) {
+        left -= speed;
+    } else if(left <= 0 && top > 0) {
+        top -= speed;
+    }
+    img.style.left = left + 'px';
+    img.style.top = top + 'px';
+}
+</script>
+
+</body>
+</html>

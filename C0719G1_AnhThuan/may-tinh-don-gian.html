@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May tinh</title>
+</head>
+
+<style>
+    button{
+        width: 50px;
+        height: 40px;
+        margin: 3px 3px 3px 3px;
+        font-size: 16px;
+    }
+    #output{
+        width: 224px;
+        height: 40px;
+        margin: 4px 4px 4px 4px;
+        text-align: right;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+
+<fieldset>
+
+<table>
+    <tr>
+        <td colspan="4"><input id="output"></td>
+    </tr>
+    <tr>
+        <td><button value="1" onclick="setOutput(this.value)">1</button></td>
+        <td><button value="2" onclick="setOutput(this.value)">2</button></td>
+        <td><button value="3" onclick="setOutput(this.value)">3</button></td>
+        <td><button value="+" onclick="setOutput(this.value)">+</button></td>
+    </tr>
+    <tr>
+        <td><button value="4" onclick="setOutput(this.value)">4</button></td>
+        <td><button value="5" onclick="setOutput(this.value)">5</button></td>
+        <td><button value="6" onclick="setOutput(this.value)">6</button></td>
+        <td><button value="-" onclick="setOutput(this.value)">-</button></td>
+    </tr>
+    <tr>
+        <td><button value="7" onclick="setOutput(this.value)">7</button></td>
+        <td><button value="8" onclick="setOutput(this.value)">8</button></td>
+        <td><button value="9" onclick="setOutput(this.value)">9</button></td>
+        <td><button value="*" onclick="setOutput(this.value)">x</button></td>
+    </tr>
+    <tr>
+        <td><button value="" onclick="clearOutput()">C</button></td>
+        <td><button value="0" onclick="setOutput(this.value)">0</button></td>
+        <td><button value="=" onclick="result()">=</button></td>
+        <td><button value="/" onclick="setOutput(this.value)">/</button></td>
+    </tr>
+</table>
+</fieldset>
+
+<script>
+    function result() {
+        let output = document.getElementById("output").value;
+        document.getElementById("output").value = eval(output);
+    }
+
+    function setOutput(number) {
+        document.getElementById("output").value += number;
+    }
+
+    function clearOutput() {
+        document.getElementById("output").value = '';
+    }
+</script>
+
+</body>
+</html>
