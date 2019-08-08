@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại</title>
+</head>
+<body>
+<input id="callHour" placeholder="Enter the number of hours you have called">
+<button type="button" onclick="mobilefee()">Check</button>
+<p id="fee"></p>
+<script>
+    function mobilefee() {
+        let hour = parseInt(document.getElementById('callHour').value);
+        let fee = hour * 60 * 1000;
+        document.getElementById('fee').innerHTML = 'Cuoc vien thong thang : ' + fee + ' VND';
+
+    }
+</script>
+</body>
+</html>

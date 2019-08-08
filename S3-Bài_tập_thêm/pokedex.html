@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokedex</title>
+</head>
+<body>
+<div>
+    <h1>POKEDEX</h1>
+    <p id="title">What Pokemon ?</p>
+    <input type="search" id="poke">
+    <button type="button" onclick="search()">Search</button>
+    <img src="" id="img">
+    <p id="result"></p>
+    <script>
+        let src = "https://img.pokemondb.net/artwork/";
+        function search() {
+            let poke = document.getElementById('poke').value;
+            let result = document.getElementById('result');
+            let img = document.getElementById('img');
+            switch (poke) {
+                case 'pikachu':
+                case 'raichu':
+                case 'Jolteon':
+                    result.innerHTML = 'Your pokemon is electric';
+                    break;
+                case 'Charmander':
+                    result.innerHTML = 'Your pokemon is Fire';
+                    break;
+                case 'Squirtle':
+                case 'Wartortle':
+                case 'Blastoise':
+                    result.innerHTML = 'Your pokemon is Water';
+                    break;
+            }
+                    img.src = src + poke + ".jpg";
+        }
+    </script>
+</div>
+</body>
+</html>

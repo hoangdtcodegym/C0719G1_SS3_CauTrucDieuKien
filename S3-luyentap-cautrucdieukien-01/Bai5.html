@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực</title>
+</head>
+<body>
+<h1>Xếp loại học sinh</h1>
+<input id="kiemtra" placeholder="Điểm kiểm tra">
+<input id="giuaki" placeholder="Điểm giữa kỳ">
+<input id="cuoiki" placeholder="Điểm cuối kỳ">
+<button type="button" onclick="xephang()">Xếp hạng học lực</button>
+<p id="tbinh"></p>
+<p id="hocluc"></p>
+<script>
+    function xephang() {
+        let kiemtra = parseFloat(document.getElementById('kiemtra').value);
+        let giuaki = parseFloat(document.getElementById('giuaki').value);
+        let cuoiki = parseFloat(document.getElementById('cuoiki').value);
+        let tbinh = kiemtra * 0.1 + giuaki * 0.3 + cuoiki * 0.6;
+        document.getElementById('tbinh').innerHTML = 'Điểm trung bình của học sinh : ' + tbinh;
+        let hocluc;
+        if (tbinh < 4) {
+            hocluc = 'Yếu';
+        } else if (tbinh < 6.5) {
+            hocluc = 'Trung bình';
+        } else if (tbinh < 8.5) {
+            hocluc = 'Khá ';
+        } else {
+            hocluc = 'Giỏi';
+        }
+        document.getElementById('hocluc').innerHTML = 'Xếp loại học sinh : ' + hocluc;
+    }
+</script>
+</body>
+</html>
