@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đua Ô Tô</title>
+</head>
+<body onload="docReady()">
+
+<img id="car" src="images/o-to-1.png" style="position: absolute; left: 50px; top: 50px;" height="194.5" width="275"/>
+<script>
+    function upArrowPresed() {
+        let upArr = document.getElementById("car");
+        upArr.style.top = parseInt(upArr.style.top) - 5 + "px";
+    }
+
+    function downArrowPressed() {
+        let downArr = document.getElementById("car");
+        downArr.style.top = parseInt(downArr.style.top) + 5 + "px";
+    }
+
+    function leftArrowPressed() {
+        let leftArr = document.getElementById("car");
+        leftArr.style.left = parseInt(leftArr.style.left) - 5 + 'px';
+    }
+
+    function rightArrowPressed() {
+        let rightArr = document.getElementById("car");
+        rightArr.style.left = parseInt(rightArr.style.left) + 5 + 'px';
+    }
+
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                leftArrowPressed();
+                break;
+            case 39:
+                rightArrowPressed();
+                break;
+            case 38:
+                upArrowPresed();
+                break;
+            case 40:
+                downArrowPressed();
+                break;
+        }
+    }
+
+    function docReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+</script>
+</body>
+</html>
