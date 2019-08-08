@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>Do You Love Me</h1>
+    <button onclick="yes()" id="y">Yes</button>
+    <button onmouseover="no()" id="n" style="position: absolute;left: auto; top: auto" >No</button>
+
+
+    <script>
+        function yes() {
+            let a = document.getElementById('y');
+            alert(':>');
+        }
+        function no() {
+            let height=window.innerHeight;
+            let weight=window.innerWidth;
+            let n=document.getElementById('n');
+            let randomHeight=Math.floor(Math.random()*height);
+            let randomWeight=Math.floor(Math.random()*weight);
+            n.style.left=randomWeight + "px";
+            n.style.top=randomHeight + "px";
+            console.log(randomWeight);
+            console.log(randomHeight);
+        }
+    </script>
+
+</body>
+</html>

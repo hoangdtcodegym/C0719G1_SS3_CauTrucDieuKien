@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let weight=parseFloat(prompt('Nhap can nang:'));
+    let height=parseFloat(prompt('Nhap chieu cao:'));
+    let bmt=weight/(height*height);
+    if(bmt<18.5){
+        document.write('underweight');
+    }else if(bmt<25){
+        document.write('normal');
+    }else if(bmt<30){
+        document.write('overweight');
+    }else
+        document.write('obese');
+</script>
+</body>
+</html>

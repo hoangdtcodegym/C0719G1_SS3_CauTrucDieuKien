@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    div{
+        border: solid;
+        width: 184px;
+    }
+    input{
+        width: 100%;
+    }
+</style>
+<div>
+<table>
+    <tr>
+        <td colspan="4"><input id="output"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="1" onclick="setOutput(this.value)"></td>
+        <td><input type="button" value="2" onclick="setOutput(this.value)"></td>-->
+        <td><input type="button" value="3" onclick="setOutput(this.value)"></td>
+        <td><input type="button" value="+" onclick="setOutput(this.value)"></td>
+    </tr><tr>
+        <td><input type="button" value="4" onclick="setOutput(this.value)"></td>
+        <td><input type="button" value="5" onclick="setOutput(this.value)"></td>
+        <td><input type="button" value="6" onclick="setOutput(this.value)"></td>
+        <td><input type="button" value="-" onclick="setOutput(this.value)"></td>
+    </tr><tr>
+        <td><input type="button" value="7" onclick="setOutput(this.value)"></td>
+        <td><input type="button" value="8" onclick="setOutput(this.value)"></td>
+        <td><input type="button" value="9" onclick="setOutput(this.value)"></td>
+        <td><input type="button" value="*" onclick="setOutput(this.value)"></td>
+    </tr><tr>
+        <td><input type="button" value="C" onclick="clearOut()"></td>
+        <td><input type="button" value="0" onclick="setOutput(this.value)"></td>
+        <td><input type="button" value="=" onclick="result()"></td>
+        <td><input type="button" value="/" onclick="setOutput(this.value)"></td>
+    </tr>
+</table>
+</div>
+<script>
+    function setOutput(value) {
+        document.getElementById('output').value+=value;
+    }
+    function result() {
+        let res=document.getElementById('output').value;
+        document.getElementById('output').value=eval(res);
+    }
+    function clearOut() {
+        document.getElementById('output').value="";
+    }
+</script>
+</body>
+</html>
