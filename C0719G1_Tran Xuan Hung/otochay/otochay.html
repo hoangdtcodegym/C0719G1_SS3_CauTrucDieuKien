@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<img id="xoai" src="qua_xoai_2.jpg" style="position: absolute; left: 0; top: 0;" height="300" width="300"/>
+
+<body>
+<script>
+    {
+        let anh = document.getElementById("xoai");
+        let tung = 0;
+        let hoanh = 0;
+        let maxtop = window.innerHeight - anh.height;
+        let maxleft = window.innerWidth - anh.width;
+        setInterval(move, 10);
+
+        function move() {
+            if (hoanh < maxleft && tung <= 0) {
+                hoanh += 5;
+            }
+            if (tung < maxtop && hoanh >= maxleft) {
+                tung += 5;
+            }
+            if (tung >= maxtop && hoanh > 0) {
+                hoanh -= 5;
+            }
+            if (hoanh <= 0 && tung > 0) {
+                tung -= 5;
+            }
+            anh.style.top = tung + "px";
+            anh.style.left = hoanh + "px";
+        }
+    }
+</script>
+</body>
+</html>
