@@ -1,0 +1,73 @@
+body{
+    background-color: beige;
+}
+
+.title{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: red ;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px!important;
+}
+button{
+    border-radius: 5px;
+    width:55px;
+    height:55px;
+    background-color: black;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-color: black;
+    font-size: 25px;
+    margin-right:2px;
+}
+.line1{
+    text-align: -webkit-center;
+    margin-top:2px;
+}
+.line2{
+    text-align: -webkit-center;
+    margin-top:3px;
+}
+.line3{
+    text-align: -webkit-center;
+    margin-top:3px;
+}
+.line4{
+    text-align: -webkit-center;
+    margin-top:3px;
+}
+.line5{
+    text-align: -webkit-center;
+    margin-top:3px;
+}
+.input{
+
+    text-align: -webkit-center;
+}
+.input1 {
+        width: 240px;
+        margin-bottom: 10px;
+        border:2px solid black;
+        height:30px;
+        border-radius:4px ;
+        text-align: right;
+        font-weight: bold;
+        font-size: 20px;
+    }
+.input2 {
+    width: 240px;
+    margin-bottom: 10px;
+    border:2px solid black;
+    height:30px;
+    border-radius:4px ;
+    text-align: right;
+    font-weight: bold;
+    font-size: 20px;
+}
+#result{
+    text-align: center;
+    color:black;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 25px;
+}
