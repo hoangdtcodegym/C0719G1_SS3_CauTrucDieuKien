@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p style="position: absolute ; text-align: center ; left: 25%;font-size: 100px"  >do you love me</p>
+<br/>
+<button id ="yes" type="button" onclick="yes()" style="position: absolute ; text-align: center ; left: 45%;top: 35%; font-size: 30px">yes</button>
+<button id="no" type="button" onmouseenter="no()" style="position: absolute  ; left: 55%;top: 35%; font-size: 30px">&nbsp;no&nbsp;</button>
+<script>
+    function yes() {
+        document.getElementById('yes').innerHTML = 'i love 3000';
+    }
+    function no() {
+        let x=Math.round(Math.random()*window.innerWidth);
+        let y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById('no').style.top = x + 'px';
+        document.getElementById('no').style.left = y + 'px';
+    }
+</script>
+</body>
+</html>
