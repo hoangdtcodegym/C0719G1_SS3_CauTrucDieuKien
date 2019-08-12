@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOGIN</title>
+</head>
+<body>
+<label>UserName:&nbsp&nbsp&nbsp&nbsp&nbsp</label><input type="text" id="user" placeholder="Enter UserName"><br><br>
+<label>Password:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><input type="text" id="pass" placeholder="Enter Password"><br>
+<input type="button" onclick="sub()" value="Submit">
+</body>
+<script>
+    function sub() {
+        let name = document.getElementById("user").value;
+        let mk = document.getElementById("pass").value;
+        if(name !=''){
+            if(mk !='') {
+                if (mk.length <= 6) {
+                    alert("Hello");
+                } else {
+                    alert("Password khong qua 6 ky tu");
+                }
+            }
+                else {
+                    alert("Enter Password");
+                }
+            }
+        else {
+            alert("Enter UserName");
+        }
+    }
+</script>
+</html>

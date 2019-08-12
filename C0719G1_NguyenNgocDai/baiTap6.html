@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BAI TAP 6</title>
+</head>
+<body>
+<script>
+    let doanhSo = eval(prompt("nhap doanh so"));
+    if(doanhSo >= 500000000){
+        hoahong = doanhSo * 0.2
+        alert("Hoa hong la: " + hoahong)
+    }
+    else if(100000000 <= doanhSo && doanhSo < 500000000){
+        hoahong = doanhSo * 0.15;
+        alert("Hoa hong la: " + hoahong);
+    }
+    else {
+        hoahong = doanhSo * 0.1;
+        alert("Hoa hong la: " + hoahong);
+    }
+
+</script>
+</body>
+</html>

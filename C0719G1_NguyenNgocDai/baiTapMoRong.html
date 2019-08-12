@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BAI TAP NOBITA MO RONG</title>
+</head>
+<body onload="callBack()">
+<img src="nobita1.jpg" id="nobita" style="position: absolute; left: 10px; top: 10px; width: 80px; height: 80px">
+</body>
+<script>
+
+let maxTop=window.innerHeight;
+let maxleft=window.innerWidth;
+let change=false;
+let count=0;
+let interval;
+function run() {
+    let element = document.getElementById("nobita");
+    let left = parseInt(document.getElementById("nobita").style.left);
+    let top = parseInt(document.getElementById("nobita").style.top);
+    if (!change) {
+        if (left <= maxleft - 80) {
+            left += 5;
+        } else if (top <= maxTop - 80) {
+            top += 5;
+        } else {
+            change = true;
+        }
+    }
+
+    if (change) {
+        if (left >= 0) {
+            left -= 5;
+        } else if (top >= 0) {
+            top -= 5;
+        } else {
+            change = false;
+            count++;
+            if (count >= 2) {
+                clearInterval(interval);
+
+            }
+        }
+
+    }
+    element.style.left = left + "px";
+    element.style.top = top + "px";
+}
+function callBack() {
+    interval= setInterval(run,10);
+
+}
+</script>
+</html>

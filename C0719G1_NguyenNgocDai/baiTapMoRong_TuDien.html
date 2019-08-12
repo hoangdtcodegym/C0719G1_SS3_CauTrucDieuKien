@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TU DIEN</title>
+</head>
+<body>
+<label>Keyword &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><input type="text" id="key" placeholder="Enter keyword">
+<input type="button" onclick="convert()" value="Submit"><br>
+<text id="translate"></text>
+</body>
+<script>
+    function convert() {
+        let word = document.getElementById("key").value;
+        switch (word) {
+            case "apple":
+                document.getElementById("translate").innerHTML = "qua tao";
+                break;
+            case "banana":
+                document.getElementById("translate").innerHTML = "qua chuoi";
+            case "orange":
+                document.getElementById("translate").innerHTML = "qua cam";
+                break;
+            case "grape":
+                document.getElementById("translate").innerHTML = "qua nho";
+                break;
+            case "mango":
+                document.getElementById("translate").innerHTML = "qua xoai";
+            default:
+                document.getElementById("translate").innerHTML = "khong co trong tu dien";
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BAI TAP 7</title>
+</head>
+<body>
+<script>
+    let min = parseInt(prompt("Input min"));
+    if(min >= 30000){
+        paymoney = min * 1.2;
+    }
+    else if(10000 <= min && min < 30000){
+        paymoney = min * 1.15;
+    }
+    else {
+        paymoney = min * 1.1;
+    }
+    alert("paymoney: " + paymoney);
+</script>
+</body>
+</html>
