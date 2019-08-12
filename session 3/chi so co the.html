@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>nhap can nang</p>
+<input id="nhapcannang" type="number">
+<p>nhap chieu cao</p>
+<input id="nhapchieucao" type="number"><br/>
+<button type="button" onclick="tinh()">tinh toan</button>
+<script>
+    function tinh() {
+        let cannang = document.getElementById('nhapcannang').value;
+        let chieucao = document.getElementById('nhapchieucao').value;
+        let ketqua = cannang / (chieucao * chieucao);
+            if (ketqua <18){
+                alert("ban qua gay")
+            }else if (ketqua <25){
+                alert('ban can doi')
+            }else if (ketqua <30){
+                alert('ban hoi beo')
+            }else{
+                alert('ban bi beo phi')
+            }
+    }
+</script>
+</body>
+</html>
