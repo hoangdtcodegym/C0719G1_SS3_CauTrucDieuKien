@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="ten" placeholder="Nhập tên">
+<input type="button" value="Kiểm tra" onclick="tracuu()">
+<br>
+<br>
+<p id="result"></p>
+<script>
+    let ten = document.getElementById("ten").value;
+    let result = document.getElementById("result");
+    function tracuu() {
+        let tracuu = document.getElementById("ten").value;
+        switch (tracuu) {
+            case 'Xoài':
+            {
+                img.src = "Xoài.jpg";
+                result.innerHTML = "Cam được trồng rộng rãi ở những nơi có khí hậu ấm áp, và vị cam có thể biến đổi từ ngọt đến chua. Cam thường lột vỏ và ăn lúc còn tươi, hay vắt lấy nước. Vỏ cam dày, có vị đắng, thường bị vứt đi nhưng có thể chế biến thành thức ăn cho súc vật bằng cách rút nước bằng sức ép và hơi nóng"
+                break;
+            }
+            case 'Cam': {
+                img.src = "cam.jpg";
+                result.innerHTML = "Cam được trồng rộng rãi ở những nơi có khí hậu ấm áp, và vị cam có thể biến đổi từ ngọt đến chua. Cam thường lột vỏ và ăn lúc còn tươi, hay vắt lấy nước. Vỏ cam dày, có vị đắng, thường bị vứt đi nhưng có thể chế biến thành thức ăn cho súc vật bằng cách rút nước bằng sức ép và hơi nóng"
+                break;
+            }
+            case 'Chanh': {
+                img.src = "chanh.jpg";
+                result.innerHTML = "Chanh là một số loài thực vật cho quả nhỏ, thuộc chi Cam chanh (Citrus), khi chín có màu xanh hoặc vàng, thịt quả có vị chua. Quả chanh được sử dụng làm thực phẩm trên khắp thế giới - chủ yếu dùng nước ép của nó, thế nhưng phần cơm (các múi của chanh) và vỏ (zest) cũng được sử dụng, chủ yếu là trong nấu ăn và nướng bánh"
+                break;
+            }
+            case 'Bưởi': {
+                img.src = "bưởi.jpg";
+                result.innerHTML = "Bưởi là loài cây to, cao trung bình khoảng 3–4 m ở tuổi trưởng thành, vỏ thân có màu vàng nhạt, ở những kẽ nứt của thân đôi khi có chảy nhựa. Cây thân gỗ. Cành có gai dài, nhọn"
+                break;
+            }
+            case 'Dưa hấu': {
+                img.src = "duahau.jpg";
+                result.innerHTML = "Dưa hấu rất đa dạng về hình dạng và màu sắc, có màu xanh nhạt và có những đường kẻ từ trên xuống dưới.Hình dạng được xem xét với mặt phẳng cắt ngang từ cuống trái đến đuôi trái dưa. Có các dạng chính sau: dạng thuôn dài, dạng trái oval, dạng trái tròn.Hạt dưa cũng rất đa dạng về kích cỡ (lớn, trung bình, nhỏ). Màu hạt có màu đen."
+                break;
+            }
+        }
+    }
+</script>
+</body>
+</html>
