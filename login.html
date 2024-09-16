@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOGIN</title>
+</head>
+<body>
+
+User:
+<input id="user" style="position: absolute; left: 85px; width: 255px; height: 20px">
+<br>
+<br>
+Password:
+<input id="pass" style="position: absolute; left: 85px; width: 255px; height: 20px">
+<br> <br>
+<button id="in" type="button" onclick="login()" style="position: absolute; left: 85px;width: 255px">SignIn</button>
+<br><br>
+<button type="button" id="up" onclick="signup()" style="width: 125px; position:absolute; left: 85px;">SingUp</button>
+<button type="button" id="forward" onclick="forwardpass()" style="position: absolute; left: 215px; width: 125px;">ForwardPassWord</button>
+<br><br>
+<p id="alert" style="color: red;"></p>
+</body>
+<script>
+    function login() {
+        let username = document.getElementById('user').value;
+
+        let alert    = document.getElementById('alert');
+        if(username.length<6) {
+            alert.innerHTML = "user name phai nhieu hon 6 ky tu";
+        }else {
+                alert.innerHTML = "Moi nhap passWord";
+                    let password = document.getElementById('pass').value;
+                    if(password.length<6){
+                        alert.innerHTML =" Pass word phai lon hon 6 ky tu"
+                    }else{
+                        alert.innerHTML =" welcome"
+                    }
+        }
+    }
+</script>
+</html>
